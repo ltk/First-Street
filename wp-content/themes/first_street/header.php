@@ -38,17 +38,17 @@
 
   <header id="header" class="inner group">
 
-    <a id="brand pull-left">
+    <a id="brand" class="pull-left">
       <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="First Street" /> -->
       <img src="http://www.placekitten.com/342/112" alt="First Street" />
     </a>
 
-    <ul id="utility-nav" class="teal nav">
+    <ul id="utility-nav" class="teal nav pull-right separated-nav">
       <li>Contact Us</li>
       <li>Login</li>
     </ul>
 
-    <ul id="primary-nav" class="nav">
+    <ul id="primary-nav" class="nav pull-right clear-right separated-nav">
       <li>Take a Tour</li>
       <li>Get Started</li>
       <li>What's New</li>
