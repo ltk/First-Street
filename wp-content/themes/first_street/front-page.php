@@ -1,15 +1,15 @@
 <?php get_header(); ?>
-  <div class="inner unpadded" id="banner">
-    <ul id="tab-nav" class="nav">
-      <li class="uppercase white teal-bg">Lobbyists</li>
-      <li class="uppercase white purple-bg">Media</li>
-      <li class="uppercase white orange-bg">Associations</li>
-      <li class="uppercase white green-bg">Government</li>
-      <li class="uppercase white red-bg">Corporations</li>
-      <li class="uppercase white yellow-bg">Education</li>
-      <li class="uppercase white dark-gray-bg">Research</li>
-    </ul>
-    <div id="featured-content"></div>
+  <ul id="tab-nav" class="nav tabbed-nav inner group">
+    <li class="uppercase white teal-bg">Lobbyists</li>
+    <li class="uppercase white purple-bg">Media</li>
+    <li class="uppercase white orange-bg">Associations</li>
+    <li class="uppercase white green-bg">Government</li>
+    <li class="uppercase white red-bg">Corporations</li>
+    <li class="uppercase white yellow-bg">Education</li>
+    <li class="uppercase white dark-gray-bg">Research</li>
+  </ul>
+  <div class="inner group" id="banner">
+
   </div>
   <div class="inner group" id="content">
     <div id="page-content">

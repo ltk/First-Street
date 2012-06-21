@@ -19,6 +19,7 @@
   <?php wp_head(); ?>
 	
   <link rel="stylesheet/less" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/less/bootstrap.less">
+  <!-- <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/less/bootstrap.css"> -->
   <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/less-1.3.0.min.js" type="text/javascript"></script>
 </head>
 
@@ -44,8 +45,12 @@
     </a>
 
     <ul id="utility-nav" class="teal nav pull-right separated-nav">
-      <li>Contact Us</li>
-      <li>Login</li>
+      <li>
+        <a href="#">Contact Us</a>
+      </li>
+      <li>
+        <a href="#">Login</a>
+      </li>
     </ul>
 
     <ul id="primary-nav" class="nav pull-right clear-right separated-nav">
