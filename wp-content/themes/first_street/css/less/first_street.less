@@ -2,6 +2,7 @@
 @site-width: 980px; 
 @site-padding: 0 20px;
 @main-font: "Century Gothic";
+@section-margin: 30px;
 
 @teal: 	#5bb6ad;
 @purple: #5e1e75;
@@ -104,7 +105,7 @@ body { line-height: 1.6em; }
 
 /*  HEADER */
 
-#header { margin-bottom:30px; }
+#header { margin-bottom:@section-margin; }
 
 #brand { }
 
@@ -135,6 +136,7 @@ body { line-height: 1.6em; }
 	.border-radius(5px);
 	.teal-bg;
 	height:250px;
+	margin-bottom:@section-margin;
 }
 
 /* FOOTER */
