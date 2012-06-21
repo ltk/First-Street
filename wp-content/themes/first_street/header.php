@@ -41,7 +41,7 @@
 
     <a id="brand" class="pull-left">
       <!-- <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="First Street" /> -->
-      <img src="http://www.placekitten.com/342/112" alt="First Street" />
+      <img src="<?php echo get_template_directory_uri(); ?>/img/firststreet_logo.jpg" alt="First Street" />
     </a>
 
     <ul id="utility-nav" class="teal nav pull-right separated-nav">

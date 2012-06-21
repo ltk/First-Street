@@ -5,21 +5,21 @@
         	<ul id="parent-companies" class="group">
 				<li>
 					<a href="#" title="#">
-						<img title="Placeholder" alt="Placeholder" src="http://placekitten.com/g/50/50">
+						<img title="CQ Press" alt="CQ Press" src="<?php echo get_template_directory_uri(); ?>/img/cqpress_logo.jpg">
 					</a>
 				</li>
 				<li>
 					<a href="#" title="#">
-						<img title="Placeholder" alt="Placeholder" src="http://placekitten.com/50/50">
+						<img title="SAGE" alt="SAGE" src="<?php echo get_template_directory_uri(); ?>/img/sage_logo.jpg">
 					</a>
 				</li>
 			</ul>
-			<p><span class="uppercase strong font-size-13">First Street is powered by CQ Press, and imprint of SAGE Publications.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit dolor, mollis non ullamcorper eu, aliquet nec urna. Phasellus vitae lacus neque, eu varius elit. Morbi vitae tellus arcu. Nulla facilisi. Mauris feugiat, neque sed commodo mollis, nisi neque sollicitudin purus, vel iaculis turpis nisi sed purus. Pellentesque mollis, leo a blandit suscipit, lectus quam auctor lacus, nec vulputate leo urna ac leo. Pellentesque porttitor, augue eu tempor rhoncus, sem turpis aliquet nisi, eu auctor libero lorem nec nisl.</p>
+			<p><span class="uppercase strong font-size-12">First Street is powered by CQ Press, and imprint of SAGE Publications.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit dolor, mollis non ullamcorper eu, aliquet nec urna. Phasellus vitae lacus neque, eu varius elit. Morbi vitae tellus arcu. Nulla facilisi. Mauris feugiat, neque sed commodo mollis, nisi neque sollicitudin purus, vel iaculis turpis nisi sed purus. Pellentesque mollis, leo a blandit suscipit, lectus quam auctor lacus, nec vulputate leo urna ac leo. Pellentesque porttitor, augue eu tempor rhoncus, sem turpis aliquet nisi, eu auctor libero lorem nec nisl.</p>
         </div>
-        <div class="widget small">
-        	<h2 class="uppercase font-size-18 white">Go Inside-the-Beltway</h2>
+        <div class="widget small align-center">
+        	<h2 class="uppercase font-size-18 white align-left">Go Inside-the-Beltway</h2>
 			<h4 class="align-right uppercase font-size-13">With Our Panel of Experts</h4>
-			<ul id="experts">
+			<ul id="experts" class="group">
 				<li>
 					<a href="#" title="#">
 						<img title="Placeholder" alt="Placeholder" src="http://placekitten.com/g/82/77">
