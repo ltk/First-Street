@@ -36,16 +36,22 @@
   ?>
   <?php roots_header_after(); ?>
 
-  <header id="header" class="inner">
-    <a id="brand">First Street</a>
-    <ul id="utility-nav">
+  <header id="header" class="inner group">
+
+    <a id="brand">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="First Street" />
+    </a>
+
+    <ul id="utility-nav" class="teal nav">
       <li>Contact Us</li>
       <li>Login</li>
     </ul>
-    <ul id="primary-nav">
+
+    <ul id="primary-nav" class="nav">
       <li>Take a Tour</li>
       <li>Get Started</li>
       <li>What's New</li>
       <li>About</li>
     </ul>
+
   </header>
