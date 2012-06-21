@@ -15,7 +15,8 @@
 /* 	UTILITY */
 .pull-left { float:left; }
 .pull-right { float:right; }
-
+.clear-left { clear: left; }
+.clear-right { clear: right; }
 .inner { width: @site-width; margin:0 auto; padding: @site-padding; box-sizing:border-box; }
 .unpadded { padding:0; }
 
@@ -36,10 +37,10 @@
 // Text Styles
 .main-font { font-family:@main-font; }
 .strong { font-weight:bold; }
-.align-left {text-align:left; }
-.align-right {text-align:right; }
-.align-center {text-align:center; }
-.uppercase {text-transform:uppercase; }
+.align-left { text-align:left; }
+.align-right { text-align:right; }
+.align-center { text-align:center; }
+.uppercase { text-transform:uppercase; }
 
 // Font-sizes
 .font-size-9 { font-size:9px; }
@@ -104,8 +105,16 @@
 
 #brand { }
 
-#utility-nav {  }
-#utility-nav {  }
+.separated-nav {  }
+.separated-nav li { }
+.separated-nav li:before {  
+	content: "|";
+	margin-left:10px;
+	padding-right:10px;
+}
+.separated-nav li:first-child:before { 
+	content:"";
+}
 
 /* FOOTER */
 #footer {
