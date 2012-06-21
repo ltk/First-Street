@@ -17,7 +17,7 @@
     </div>
     <div class="widget-area large" id="widget-area-1">
       <div class="widget">
-        <h3>First Street Research Group</h3>
+        <h3 class="dark-gray uppercase main-font">First Street Research Group</h3>
         <div>
           <h4>Three Former Lobyists Join Romney Education Policy Team</h4>
           <p>
@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="widget">
-        <h3>What's New at First Street</h3>
+        <h3 class="dark-gray uppercase main-font">What's New at First Street</h3>
         <div>
           <h4>First Street Partners with ALL</h4>
           <p>First Street and the American League of Lobbyists (ALL) have formed a partnership that makes it cheaper for ALL members to access <a class="read-more">More</a></p>

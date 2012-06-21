@@ -1,4 +1,4 @@
-  <footer id="footer" class="">
+  <footer id="footer" class="dark-gray-bg">
     <div class="inner">
       <div class="widget-area full" id="footer-widget-area-1">
         <div class="widget large">
