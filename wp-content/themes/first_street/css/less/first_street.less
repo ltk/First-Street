@@ -38,6 +38,7 @@
 .strong { font-weight:bold; }
 .align-left {text-align:left; }
 .align-right {text-align:right; }
+.align-center {text-align:center; }
 .uppercase {text-transform:uppercase; }
 
 // Font-sizes
@@ -109,8 +110,9 @@
 /* FOOTER */
 #footer {
 	margin-top:25px;
+	padding-bottom:30px;
 	padding-top:30px;
-	color: @light-gray;
+	.light-gray;
 	box-shadow: inset 0 0 10px #000000;
 	
 	#sitemap-nav {
@@ -151,4 +153,26 @@
 			margin-right:15px;
 		}
 	}
+	
+	#experts {
+		margin:10px 0 0 0;
+		
+		li {
+			display:block;
+			.pull-left;
+			margin-right:5px;
+		}
+	}
 }
+
+/* WIDGETS */
+.widget {
+	.pull-left;
+}
+.small {
+	width:30%;
+}
+.large {
+	width:70%;
+}
+
