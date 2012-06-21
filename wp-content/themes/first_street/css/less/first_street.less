@@ -106,6 +106,13 @@ body * { line-height: 1.6em; }
 .white { color:@white; }
 .white a { color:@white; }
 
+.feature-panel {
+	border: 1px solid #e0e0e0;
+	.border-radius(@b-radius);
+	#gradient > .vertical(#fefefe, #f2f2f2);
+	// background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#f2f2f2));
+	
+}
 /*  HEADER */
 
 #header { margin-bottom:@section-margin; }
@@ -255,7 +262,7 @@ body * { line-height: 1.6em; }
 
 /* BUTTONS */
 .button {
-	border-radius: 5px;
+	.border-radius(@b-radius);
 	background: -webkit-gradient(linear, left top, left bottom, from(darken(@teal, 12%)), to(lighten(@teal, 5%)));
 	display: inline-block;
 	padding: 5px 10px;
