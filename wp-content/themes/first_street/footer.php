@@ -97,7 +97,7 @@
         	<h3 class="uppercase align-right font-size-17">Call Us Today at 800.555.1234</h3>
 			<p class="align-right font-size-9">&copy; 2012, CQ Press, An Imprint of SAGE Publications. All Rights Reserved.</p>
 			<p class="align-right font-size-9">CQ Press is a registered trademark of Congressional Quarterly Inc.</p>
-			<ul>
+			<ul class="separated-nav">
 				<li>
 					<a href="#" title="#">Privacy Policy</a>
 				</li>
