@@ -1,4 +1,4 @@
-  <footer id="footer" class="dark-gray-bg">
+  <footer id="footer" class="dark-gray-bg group">
     <div class="inner">
       <div class="widget-area full" id="footer-widget-area-1">
         <div class="widget large">
@@ -17,9 +17,9 @@
 			<p><span class="uppercase strong">First Street is powered by CQ Press, and imprint of SAGE Publications.</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce velit dolor, mollis non ullamcorper eu, aliquet nec urna. Phasellus vitae lacus neque, eu varius elit. Morbi vitae tellus arcu. Nulla facilisi. Mauris feugiat, neque sed commodo mollis, nisi neque sollicitudin purus, vel iaculis turpis nisi sed purus. Pellentesque mollis, leo a blandit suscipit, lectus quam auctor lacus, nec vulputate leo urna ac leo. Pellentesque porttitor, augue eu tempor rhoncus, sem turpis aliquet nisi, eu auctor libero lorem nec nisl.</p>
         </div>
         <div class="widget small">
-        	<h2 class="uppercase">Go Inside-the-Beltway</h2>
-			<h4 class="align-right uppercase">With Our Panel of Experts</h4>
-			<ul>
+        	<h2 class="uppercase font-size-18 white">Go Inside-the-Beltway</h2>
+			<h4 class="align-right uppercase font-size-13">With Our Panel of Experts</h4>
+			<ul id="experts">
 				<li>
 					<a href="#" title="#">
 						<img title="Placeholder" alt="Placeholder" src="http://placekitten.com/g/82/77">
@@ -36,7 +36,7 @@
 					</a>
 				</li>
 			</ul>
-			<a href="#" title="Meet the Full Team">Meet the Full Team</a>
+			<a class="align-center" href="#" title="Meet the Full Team">Meet the Full Team</a>
         </div>
       </div>
       <div class="widget-area full" id="footer-widget-area-2">
@@ -94,9 +94,9 @@
 			</ul>
         </div>
         <div class="widget small">
-        	<h3 class="uppercase align-right">Call Us Today at 800.555.1234</h3>
-			<p class="align-right">&copy; 2012, CQ Press, An Imprint of SAGE Publications. All Rights Reserved.</p>
-			<p class="align-right">CQ Press is a registered trademark of Congressional Quarterly Inc.</p>
+        	<h3 class="uppercase align-right font-size-17">Call Us Today at 800.555.1234</h3>
+			<p class="align-right font-size-9">&copy; 2012, CQ Press, An Imprint of SAGE Publications. All Rights Reserved.</p>
+			<p class="align-right font-size-9">CQ Press is a registered trademark of Congressional Quarterly Inc.</p>
 			<ul>
 				<li>
 					<a href="#" title="#">Privacy Policy</a>
