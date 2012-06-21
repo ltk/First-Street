@@ -18,7 +18,6 @@
 .clear-left { clear: left; }
 .clear-right { clear: right; }
 .inner { width: @site-width; margin:0 auto; padding: @site-padding; box-sizing:border-box; }
-.unpadded { padding:0; }
 
 .nav > li {
 	display: block;
@@ -116,6 +115,19 @@
 .separated-nav > li > a { display:inline; } 
 .separated-nav li:first-child:before { 
 	content:"";
+}
+
+/*  BANNER */
+
+.tabbed-nav > li {
+	.border-radius(5px 5px 0 0);
+	padding:10px;
+}
+
+#banner {
+	.border-radius(5px);
+	.teal-bg;
+	height:250px;
 }
 
 /* FOOTER */
