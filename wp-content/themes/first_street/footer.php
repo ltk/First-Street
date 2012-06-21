@@ -2,7 +2,7 @@
     <div class="inner">
       <div class="widget-area full" id="footer-widget-area-1">
         <div class="widget large">
-        	<ul>
+        	<ul id="parent-companies" class="group">
 				<li>
 					<a href="#" title="#">
 						<img title="Placeholder" alt="Placeholder" src="http://placekitten.com/g/50/50">
@@ -41,110 +41,57 @@
       </div>
       <div class="widget-area full" id="footer-widget-area-2">
         <div class="widget large">
-			<dl>
-				<dt>Take a Tour</dt>
-				<dd>
-					<ul>
-						<li>
-							<a href="#" title="#">People</a>
-						</li>
-						<li>
-							<a href="#" title="#">Places</a>
-						</li>
-						<li>
-							<a href="#" title="#">Organizations</a>
-						</li>
-						<li>
-							<a href="#" title="#">Legislation</a>
-						</li>
-						<li>
-							<a href="#" title="#">Issues</a>
-						</li>
-						<li>
-							<a href="#" title="#">Videos</a>
-						</li>
-						
-					</ul>
-				</dd>
-				
-				<dt>Get Started</dt>
-				<dd>
-					<ul>
-						<li>
-							<a href="#" title="#">Sign Up!</a>
-						</li>
-						<li>
-							<a href="#" title="#">Contact Us</a>
-						</li>
-					</ul>
-				</dd>
-				
-				<dt>About First Street</dt>
-				<dd>
-					<ul>
-						<li>
-							<a href="#" title="#">Applications</a>
-						</li>
-						<li>
-							<a href="#" title="#">The Team</a>
-						</li>
-						<li>
-							<a href="#" title="#">Partnerships</a>
-						</li>
-						<li>
-							<a href="#" title="#">FAQs</a>
-						</li>
-					</ul>
-				</dd>
-				
-				<dt>Whos Using FS?</dt>
-				<dd>
-					<ul>
-						<li>
-							<a href="#" title="#">Lobbyists</a>
-						</li>
-						<li>
-							<a href="#" title="#">Media</a>
-						</li>
-						<li>
-							<a href="#" title="#">Associations</a>
-						</li>
-						<li>
-							<a href="#" title="#">Government</a>
-						</li>
-						<li>
-							<a href="#" title="#">Corporations</a>
-						</li>
-						<li>
-							<a href="#" title="#">Education</a>
-						</li>
-						<li>
-							<a href="#" title="#">Research</a>
-						</li>
-					</ul>
-				</dd>
-				
-				<dt>What's New?</dt>
-				<dd>
-					<ul>
-						<li>
-							<a href="#" title="#">Research Group</a>
-						</li>
-						<li>
-							<a href="#" title="#">News</a>
-						</li>
-						<li>
-							<a href="#" title="#">Events</a>
-						</li>
-						<li>
-							<a href="#" title="#">Testimonials &amp; Reviews</a>
-						</li>
-						<li>
-							<a href="#" title="#">Partnerships</a>
-						</li>
-					</ul>
-				</dd>
-			</dl>
+			<ul id="sitemap-nav" class="group">
+				<li>
+					<dl>
+						<dt>Take a Tour</dt>
+						<dd><a href="#" title="#">People</a></dd>
+						<dd><a href="#" title="#">Places</a></dd>
+						<dd><a href="#" title="#">Organizations</a></dd>
+						<dd><a href="#" title="#">Legislation</a></dd>
+						<dd><a href="#" title="#">Issues</a></dd>
+						<dd><a href="#" title="#">Videos</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>Get Started</dt>
+						<dd><a href="#" title="#">Sign Up!</a></dd>
+						<dd><a href="#" title="#">Contact Us</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>About First Street</dt>
+						<dd><a href="#" title="#">Applications</a></dd>
+						<dd><a href="#" title="#">The Team</a></dd>
+						<dd><a href="#" title="#">Partnerships</a></dd>
+						<dd><a href="#" title="#">FAQs</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>Whos Using FS?</dt>
+						<dd><a href="#" title="#">Lobbyists</a></dd>
+						<dd><a href="#" title="#">Media</a></dd>
+						<dd><a href="#" title="#">Associations</a></dd>
+						<dd><a href="#" title="#">Government</a></dd>
+						<dd><a href="#" title="#">Corporations</a></dd>
+						<dd><a href="#" title="#">Education</a></dd>
+						<dd><a href="#" title="#">Research</a></dd>
+					</dl>
+				</li>
+				<li>
+					<dl>
+						<dt>What's New?</dt>
+						<dd><a href="#" title="#">Research Group</a></dd>
+						<dd><a href="#" title="#">News</a></dd>
+						<dd><a href="#" title="#">Events</a></dd>
+						<dd><a href="#" title="#">Testimonials &amp; Reviews</a></dd>
+						<dd><a href="#" title="#">Partnerships</a></dd>
+					</dl>
+				</li>
+			</ul>
         </div>
         <div class="widget small">
         	<h3 class="uppercase align-right">Call Us Today at 800.555.1234</h3>

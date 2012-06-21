@@ -38,7 +38,7 @@
 
   <header id="header" class="inner group">
 
-    <a id="brand">
+    <a id="brand pull-left">
       <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="First Street" />
     </a>
 
