@@ -3,6 +3,9 @@
 @site-padding: 0 20px;
 @main-font: "Century Gothic";
 @section-margin: 30px;
+@column-padding: 30px;
+@feature-padding: 20px;
+@icon-height: 117px;
 
 @teal: 	#5bb6ad;
 @purple: #5e1e75;
@@ -106,13 +109,13 @@ body * { line-height: 1.6em; }
 .light-gray { color:@light-gray; }
 
 .white { color:@white; }
-.white a { color:@white; }
+a { color:inherit; }
 
 .feature-panel {
 	border: 1px solid #e0e0e0;
 	.border-radius(@b-radius);
 	#gradient > .vertical(#fefefe, #f2f2f2);
-	padding: 20px;
+	padding: @feature-padding;
 	// background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#f2f2f2));
 	
 }
@@ -235,7 +238,7 @@ body * { line-height: 1.6em; }
 			}
 			
 			a {
-				color: @white;
+				// color: @white;
 				
 				&:hover {
 					background: none;
@@ -278,19 +281,61 @@ body * { line-height: 1.6em; }
 }
 
 /* WIDGETS */
+.widget-area { 
+	margin-bottom:@section-margin;
+}
+
 .widget {
 	.pull-left;
+	width:100%;
+	position:relative;
 }
 .small, .large { 
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-.small {
-	width:30%;
-	
-}
-.large {
-	width:66%;
+.small { width:30%; }
+.large { width:66%; }
+.left-column { padding-right:@column-padding; box-sizing:border-box; }
+
+// News Widget
+.news-widget > h3 {
+	border-bottom:3px solid @teal;
+	padding-bottom:5px;
+	margin-bottom:5px;
+
+		.rss-link { float:right; }
+
 }
 
+.news-widget > h4 { margin-bottom:5px; }
+
+// Icon Widget
+
+.graphic-widget{ 
+	width:33.33%; 
+	.box-sizing(border-box);
+	padding: 0 @feature-padding;
+
+		i {
+			.pull-left;
+			height:@icon-height;
+			padding-right: @feature-padding;
+			width: (125-(2*@feature-padding)+1)
+		}
+
+}
+.horizontal-list .graphic-widget + .graphic-widget { 
+	border-left:1px solid @dark-gray; 
+}
+
+.horizontal-list .graphic-widget + .graphic-widget + .graphic-widget { padding-right:0; }
+
+
+.graphic-capitol { background: url('../../img/graphic-capitol.jpg') no-repeat left center; }
+.graphic-bullhorn { background: url('../../img/graphic-bullhorn.jpg') no-repeat left center; }
+.graphic-nodes { background: url('../../img/graphic-nodes.jpg') no-repeat left center; }
+
+/* RESETS */
+.unpadded { padding:0; }
