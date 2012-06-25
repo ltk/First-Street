@@ -55,7 +55,7 @@
 
     </ul>
 
-    <ul id="primary-nav" class="nav pull-right clear-right separated-nav dark-gray">
+    <ul id="primary-nav" class="nav pull-right clear-right separated-nav dark-gray font-size-18">
       <li>Take a Tour</li>
       <li>Get Started</li>
       <li>What's New</li>
