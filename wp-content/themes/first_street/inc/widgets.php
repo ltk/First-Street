@@ -151,3 +151,5 @@ class Roots_Vcard_Widget extends WP_Widget {
   <?php
   }
 }
+
+include('widgets-custom.php');

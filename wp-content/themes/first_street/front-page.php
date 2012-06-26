@@ -38,36 +38,24 @@
       </div>
     </div>
     <div class="widget-area small pull-left group" id="widget-area-2">
-      <div class="widget feature-panel image-widget">
+      <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Home Page: Right')) : ?>
+        <!-- Default if No Widgets -->
+      <?php endif; ?>
+<!--       <div class="widget feature-panel image-widget">
     		<a href="#" title="#">
     			<img title="Placeholder" alt="Placeholder" src="<?php echo get_template_directory_uri(); ?>/img/signup.jpg">
     		</a>
           </div>
-          <div class="widget feature-panel image-widget">
+      <div class="widget feature-panel image-widget">
     		<a href="#" title="#">
     			<img title="Placeholder" alt="Placeholder" src="<?php echo get_template_directory_uri(); ?>/img/newsletter.jpg">
     		</a>
-      </div>
+      </div> -->
     </div>
     <div class="widget-area full group feature-panel clear-left horizontal-list" id="widget-area-3">
-      <div class="widget graphic-widget">
-        <i class="graphic-capitol"></i>
-        <h4 class="main-font">Pioneers in Political Intelligence</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-         <a class="uppercase purple strong" href="#" title="Learn More">Learn More ></a>
-     </div>
-      <div class="widget graphic-widget">
-        <i class="graphic-bullhorn"></i>
-        <h4 class="main-font">Influence Public-Policy</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <a class="uppercase purple strong" href="#" title="Learn More">Learn More ></a>
-      </div>
-      <div class="widget graphic-widget">
-        <i class="graphic-nodes"></i>
-        <h4 class="main-font">Build Coalitions</h4>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <a class="uppercase purple strong" href="#" title="Learn More">Learn More ></a>
-      </div>
+      <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Home Page 3')) : ?>
+        <!-- Default if No Widgets -->
+      <?php endif; ?>
     </div>
     <div class="widget-area full group" id="widget-area-4">
       <div class="widget large">
