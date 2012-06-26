@@ -1,4 +1,106 @@
 <?php get_header(); ?>
+<style type="text/css">
+#banner img{
+	display:block;
+}
+
+#banner{
+	overflow:hidden;
+	padding:0;
+}
+
+#slide-holder {
+	width:100%;
+	height:100%;
+	position: relative;
+	overflow:hidden;
+
+/* Non essential */
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+#slider-nav {
+	position:absolute;
+	right:10px;
+	bottom:0;
+	z-index:500;
+
+}
+#slider-nav li {
+	width:10px;
+	height:10px;
+	background:#fff;
+	display:block;
+	float:left;
+	margin-left:5px;
+	text-indent:-10000px;
+	border-radius:5px;
+	border:1px solid #666;
+}
+#slider-nav li.current-nav {
+	background:#888;
+}
+
+#slide-holder .slide {
+	box-sizing:border-box;
+	padding:25px;
+	width:100%;
+	height:100%;
+	background:none;
+	position: absolute;
+	display:none;
+	z-index:10;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background-color: 
+	#F9F9F9;
+	background-image: -moz-linear-gradient(top, 
+	#FEFEFE, 
+	#F2F2F2);
+	background-image: -ms-linear-gradient(top, 
+	#FEFEFE, 
+	#F2F2F2);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(
+	#FEFEFE), to(
+	#F2F2F2));
+	background-image: -webkit-linear-gradient(top, 
+	#FEFEFE, 
+	#F2F2F2);
+	background-image: -o-linear-gradient(top, 
+	#FEFEFE, 
+	#F2F2F2);
+	background-image: linear-gradient(top, 
+	#FEFEFE, 
+	#F2F2F2);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#f2f2f2', GradientType=0);
+	
+	
+}
+#slide-holder .slide.current { z-index: 20; display:block;	}
+
+	.holder {
+		overflow:hidden;
+		height:0;
+		opacity:0;
+		position: absolute;
+		width:100%;
+		z-index: 30;
+	}
+
+	
+
+	#slide-holder .holder img { position: absolute; display:block;}
+
+	.holder.top {bottom:153px;}
+	.holder.bottom {top:154px;}
+
+	.holder.top img {bottom: -153px;}
+	.holder.bottom img {top: -154px;}
+
+</style>
   <ul id="tab-nav" class="nav tabbed-nav inner group">
     <li class="uppercase white teal-bg"><a href="#">Lobbyists</a></li>
     <li class="uppercase white purple-bg"><a href="#">Media</a></li>
@@ -9,7 +111,25 @@
     <li class="uppercase white dark-gray-bg"><a href="#">Research</a></li>
   </ul>
   <div id="banner"  class="inner group feature-panel">
-
+	  <ul id="slide-holder">
+	  	<li class="slide" id="slide-1">
+	  		<h1>First Slide Title</h1>
+			<h2>First Slide Subtitle</h2>
+			<a href="#" title="#">This is a link.</a>
+	  	</li>
+		<li class="slide" id="slide-2">
+	  		<h1>Second Slide Title</h1>
+			<h2>Second Slide Subtitle</h2>
+			<a href="#" title="#">This is a link.</a>
+		</li>
+		<li class="slide" id="slide-3">
+	  		<h1>Third Slide Title</h1>
+			<h2>Third Slide Subtitle</h2>
+			<a href="#" title="#">This is a link.</a>
+		</li>
+	  </ul>
+	  <ul id="slider-nav">
+	  </ul>
   </div>
   <div id="content" class="inner group">
     <div id="page-content" class="font-size-22">
