@@ -31,8 +31,10 @@ function roots_scripts() {
 
   wp_register_script('roots_plugins', '/js/plugins.js', false, null, false);
   wp_register_script('roots_main', '/js/main.js', false, null, false);
-  wp_enqueue_script('roots_plugins');
-  wp_enqueue_script('roots_main');
+  wp_register_script('jake_presents', '/wp-content/themes/first_street/js/jake_presents.js', false, null, false);
+  // wp_enqueue_script('roots_plugins');
+  //   wp_enqueue_script('roots_main');
+  wp_enqueue_script('jake_presents');
 }
 
 add_action('wp_enqueue_scripts', 'roots_scripts', 100);
