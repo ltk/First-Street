@@ -116,18 +116,18 @@
   <div id="banner"  class="inner group feature-panel">
 	  <ul id="slide-holder">
 	  	<li class="slide" id="slide-1">
-	  		<h1>First Slide Title</h1>
-			<h2>First Slide Subtitle</h2>
-			<img src="http://placekitten.com/150/150" title="#" />
-			<a href="#" title="#">This is a link.</a>
-	  	</li>
+	  		<!-- <h1>First Slide Title</h1>
+			<h2>First Slide Subtitle</h2> -->
+			<img src="http://lorempixel.com/1087/358/" title="#" />
+<!-- 			<a href="#" title="#">This is a link.</a>
+ -->	  	</li>
 		<li class="slide" id="slide-2">
-	  		<h1>Second Slide Title</h1>
-			<img src="http://placekitten.com/200/200" title="#" />
-			<a href="#" title="#">This is a link.</a>
-		</li>
+	  		<!-- <h1>Second Slide Title</h1> -->
+			<img src="http://lorempixel.com/g/1087/358/" title="#" />
+<!-- 			<a href="#" title="#">This is a link.</a>
+ -->		</li>
 		<li class="slide" id="slide-3">
-	  		<img src="http://placekitten.com/800/300" title="#" />
+	  		<img src="http://lorempixel.com/1087/358/sports/" title="#" />
 		</li>
 	  </ul>
 	  <ul id="slider-nav">
