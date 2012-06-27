@@ -28,18 +28,19 @@
 
 }
 #slider-nav li {
-	width:10px;
-	height:10px;
+	width:12px;
+	height:12px;
 	background:#fff;
 	display:block;
 	float:left;
-	margin-left:5px;
+	margin-left:6px;
 	text-indent:-10000px;
-	border-radius:5px;
+	border-radius:6px;
 	border:1px solid #666;
+	box-shadow:0px 0px 3px #666;
 }
 #slider-nav li.current-nav {
-	background:#888;
+	background:#aaa;
 }
 
 #slide-holder .slide {
@@ -115,17 +116,16 @@
 	  	<li class="slide" id="slide-1">
 	  		<h1>First Slide Title</h1>
 			<h2>First Slide Subtitle</h2>
+			<img src="http://placekitten.com/150/150" title="#" />
 			<a href="#" title="#">This is a link.</a>
 	  	</li>
 		<li class="slide" id="slide-2">
 	  		<h1>Second Slide Title</h1>
-			<h2>Second Slide Subtitle</h2>
+			<img src="http://placekitten.com/200/200" title="#" />
 			<a href="#" title="#">This is a link.</a>
 		</li>
 		<li class="slide" id="slide-3">
-	  		<h1>Third Slide Title</h1>
-			<h2>Third Slide Subtitle</h2>
-			<a href="#" title="#">This is a link.</a>
+	  		<img src="http://placekitten.com/800/300" title="#" />
 		</li>
 	  </ul>
 	  <ul id="slider-nav">

@@ -16,6 +16,8 @@ var slider = {
 	total_slides : null,
 	last_slide : null,
 	first_slide : null,
+	animating : false,
+	int : null,
 
 	// Internal Methods
 	add_slide : function (slide) {
@@ -53,7 +55,9 @@ var slider = {
 	},
 
 	go_to : function(animation, slide) {
-		window["slider"][animation](this.current_slide);
+		this.animating = true;
+		
+		window["slider"][animation](slide);
 		
 		this.set_current_slide(slide);
 		
@@ -62,20 +66,23 @@ var slider = {
 
 		this.remove_message();
 		this.set_message(slide);
-
+		
+		this.animating = false;
 		return slide;
 	}, 
 
 	animate_slide_left : function(slide){
 		var distance = this.container.outerWidth();
-		this.next_slide().dom_el.css({
+
+		slide.dom_el.css({
 			left : distance,
 			display : 'block'
 		})
 		.stop().animate({
 			left:0
 		}, 'slow');
-		slide.dom_el.stop().animate({
+
+		this.current_slide.dom_el.stop().animate({
 			left: distance*-1
 		}, 'slow', function() {
 			$(this).css('left', distance);
@@ -84,14 +91,14 @@ var slider = {
 
 	animate_slide_right : function(slide){
 		var distance = this.container.outerWidth();
-		this.next_slide().dom_el.css({
+		slide.dom_el.css({
 			left : distance*-1,
 			display : 'block'
 		})
 		.stop().animate({
 			left:0
 		}, 'slow');
-		slide.dom_el.stop().animate({
+		this.current_slide.dom_el.stop().animate({
 			left: distance
 		}, 'slow', function() {
 			$(this).css('left', distance*-1);
@@ -153,13 +160,39 @@ var slider = {
 			slider.nav_container.append('<li id="jake-nav-slide-' + index + '" ' + (index == 0 ? 'class="current-nav"' : '') + '><a href="'+this.link+'">'+this.title+'</a></li>');
 			slider.slides[index].nav_tab = $("#jake-nav-slide-" + index);
 			$("#jake-nav-slide-" + index).on('click', function(){
-				slider.go_to("animate_slide_right", slider.slides[index]);
+				
+				if(!slider.animating && slider.current_slide.index != index){
+					slider.stop_interval();
+					var animation = "animate_slide_left";
+					if(slider.current_slide.index > index){
+						animation = "animate_slide_right";
+					}
+					slider.go_to(animation, slider.slides[index]);
+					setTimeout(slider.start_interval(), slider.interval);
+				}
 			});
 			//slider.message_container.append('<a id="jake-message-' + index + '" ' + (index == 0 ? 'class="current-message"' : '') + ' href="'+this.link+'">'+this.message+'</a>');
 			//slider.slides[index].message_el = $("#jake-message-" + index);
 		});
 
-		setInterval(function() { slider.go_to("animate_slide_right", slider.next_slide()) }, this.interval);
+		this.container.hover(
+			function(){
+				slider.stop_interval();
+			},
+			function(){
+				slider.start_interval();
+			}
+		);
+
+		this.start_interval();
+	},
+
+	start_interval : function() {
+		this.int=self.setInterval(function() { slider.go_to("animate_slide_left", slider.next_slide()) }, this.interval);
+	},
+
+	stop_interval : function() {
+		window.clearInterval(this.int);
 	}
 
 
@@ -171,18 +204,21 @@ $(function() {
 	slider.add_slide({ 
 		dom_el : $('#slide-1'),
 		title : "First Slide",
+		index : 0,
 		link : "http://www.elginbutler.com/products.php?page=brick",
 		message : "Rice University"
 	});
 	slider.add_slide({
 		dom_el : $('#slide-2'),
 		title : "2nd Slide",
+		index : 1,
 		link : "http://www.elginbutler.com/products.php?page=sgt",
 		message : "Peaster High School"
 	});
 	slider.add_slide({
 		dom_el : $('#slide-3'),
 		title : "3rd Slide",
+		index : 2,
 		link : "http://www.elginbutler.com/products.php?page=trim",
 		message : "Chicago Transit Authority"
 	});
