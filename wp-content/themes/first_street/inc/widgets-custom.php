@@ -30,6 +30,7 @@ function jake_widgets_init() {
 	));
 
 	register_widget('Jake_Graphic_Widget');
+	register_widget('Jake_News_Widget');
 }
 add_action('widgets_init', 'jake_widgets_init');
 
@@ -124,5 +125,101 @@ class Jake_Graphic_Widget extends WP_Widget {
 
 /** 
 	End Graphic Widget
-*/
 
+	Begin News Widget
+*/
+	class Jake_News_Widget extends WP_Widget {
+		function Jake_News_Widget() {
+			$widget_ops = array('classname' => 'Jake_News_Widget', 'description' => __('Use this widget to display the most recent blog post.', 'roots'));
+			$this->WP_Widget('Jake_News_Widget', __('News Widget', 'roots'), $widget_ops);
+			$this->alt_option_name = 'Jake_News_Widget';
+
+			add_action('save_post', array(&$this, 'flush_widget_cache'));
+			add_action('deleted_post', array(&$this, 'flush_widget_cache'));
+			add_action('switch_theme', array(&$this, 'flush_widget_cache'));
+		}
+
+		function widget($args, $instance) {
+			// Gonna have to actually get the post from here.
+		?>
+		<div class="widget news-widget">
+			<h3 class="dark-gray uppercase main-font">What's New at First Street</h3>
+			<div>
+				<h4 class="dark-gray main-font">First Street Partners with ALL</h4>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam velit felis, gravida sed bibendum vel, commodo ac elit. Nam quis risus enim, ut convallis diam. Aliquam lacinia lectus ut est laoreet sit amet porttitor metus commodo. Aliquam erat volutpat. Donec nisl nisl, hendrerit a egestas ac, adipiscing dignissim dolor. Nulla nulla tellus, aliquam eu malesuada in, pellentesque tincidunt est. <a class="read-more orange strong right-arrow">More</a></p>
+			</div>
+		</div>
+	<?php
+		}
+
+		function update($new_instance, $old_instance) {
+			$instance = $old_instance;
+			$instance['title'] = strip_tags($new_instance['title']);
+			$instance['blog'] = strip_tags($new_instance['blog']);
+			$instance['rss'] = strip_tags($new_instance['rss']);
+			$instance['date'] = strip_tags($new_instance['link']);
+
+			$this->flush_widget_cache();
+
+			$alloptions = wp_cache_get('alloptions', 'options');
+			if (isset($alloptions['Jake_News_Widget'])) {
+				delete_option('Jake_News_Widget');
+			}
+
+			return $instance;
+		}
+
+		function flush_widget_cache() {
+			wp_cache_delete('Jake_News_Widget', 'widget');
+		}
+
+		function tjg_input_check( $var, $value, $type ) {
+			if ( $var === $value && $type == 'select' ) { return 'selected="selected""'; }
+			if ( $var === $value && $type == 'check' ) { return 'checked="checked"'; }
+		}
+
+		function form($instance) {
+			$title = isset($instance['title']) ? esc_attr($instance['title']) : '';
+			$blog = isset($instance['blog']) ? esc_attr($instance['blog']) : '';
+			$rss = isset($instance['rss']) ? esc_attr($instance['rss']) : '';
+			$date = isset($instance['date']) ? esc_attr($instance['date']) : '';
+
+			if ( false === ( $site_list = get_transient( 'multisite_site_list' ) ) ) { 
+				global $wpdb;
+				$expires = 60*60*2;
+				$query = 'SELECT * FROM wp_blogs ORDER BY blog_id';
+				$site_list = $wpdb->get_results( $wpdb->prepare($query) );
+				set_site_transient( 'multisite_site_list', $site_list, $expires ); 
+				print_r($site_list);
+			}
+		?>
+			<p>
+				<label for="<?php echo esc_attr($this->get_field_id('title')); ?>"><?php _e('Title:', 'roots'); ?></label>
+				<input class="widefat" id="<?php echo esc_attr($this->get_field_id('title')); ?>" name="<?php echo esc_attr($this->get_field_name('title')); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
+			</p>
+
+			<p>
+				<label for="<?php echo esc_attr($this->get_field_id('blog')); ?>"><?php _e('Graphic:', 'roots'); ?></label>
+				<select name="<?php echo esc_attr($this->get_field_name('blog')); ?>" id="<?php echo esc_attr($this->get_field_id('blog')); ?>">
+		<?php 
+
+		?>
+				</select>
+			</p>
+
+			<table>
+				<tr>
+					<td>
+						<label for="<?php echo esc_attr($this->get_field_id('rss')); ?>"><?php _e('Show RSS Link:', 'roots'); ?></label>
+						<input type="checkbox" id="<?php echo esc_attr($this->get_field_id('rss')); ?>" name="<?php echo esc_attr($this->get_field_name('rss')); ?>" <?php echo $this->tjg_input_check($date, 'true', 'check'); ?> value="true" />
+					</td>
+					<td>
+						<label for="<?php echo esc_attr($this->get_field_id('date')); ?>"><?php _e('Show Date:', 'roots'); ?></label>
+						<input type="checkbox" id="<?php echo esc_attr($this->get_field_id('date')); ?>" name="<?php echo esc_attr($this->get_field_name('date')); ?>" <?php echo $this->tjg_input_check($date, 'true', 'check'); ?> value="true" />
+					</td>
+				</tr>
+			</table>
+
+		<?php
+		}
+	}
