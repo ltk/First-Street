@@ -2,6 +2,15 @@
 
 function jake_widgets_init() {
 	register_sidebar(array(
+		'name' => __('Home Page: Left', 'roots'),
+		'id' => 'homepage-1',
+		'description' => 'This is the area on the left side of the homepage.',
+		'before_widget' => '',
+		'after_widget' => '',
+		'before_title' => '',
+		'after_title' => '',
+	));
+	register_sidebar(array(
 		'name' => __('Home Page: Right', 'roots'),
 		'id' => 'homepage-2',
 		'description' => 'This is the area on the right side of the homepage.',
@@ -11,7 +20,7 @@ function jake_widgets_init() {
 		'after_title' => '',
 	));
 	register_sidebar(array(
-		'name' => __('Home Page 3', 'roots'),
+		'name' => __('Home Page: 3', 'roots'),
 		'id' => 'homepage-3',
 		'description' => 'This is the area on the bottom half of the home page, in the gray box.',
 		'before_widget' => '',
