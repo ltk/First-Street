@@ -138,8 +138,8 @@
       <?php get_template_part("loop", "home"); ?>
     </div>
     <div class="widget-area large pull-left group left-column" id="widget-area-1">
-      <div class="widget news-widget">
-<!--         <h3 class="dark-gray uppercase main-font">First Street Research Group
+ <!--     <div class="widget news-widget">
+         <h3 class="dark-gray uppercase main-font">First Street Research Group
           <a href="#" class="rss-link"><img src="<?php echo get_template_directory_uri(); ?>/img/rss-icon.jpg" alt="subscribe"/></a>
         </h3>
         <div>
@@ -158,7 +158,7 @@
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam velit felis, gravida sed bibendum vel, commodo ac elit. Nam quis risus enim, ut convallis diam. Aliquam lacinia lectus ut est laoreet sit amet porttitor metus commodo. Aliquam erat volutpat. Donec nisl nisl, hendrerit a egestas ac, adipiscing dignissim dolor. Nulla nulla tellus, aliquam eu malesuada in, pellentesque tincidunt est. <a class="read-more orange strong right-arrow">More</a></p>
         </div>
       </div> -->
-      <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Home Page 3')) : ?>
+      <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('Home Page: Left')) : ?>
         <!-- Default if No Widgets -->
       <?php endif; ?>
 
