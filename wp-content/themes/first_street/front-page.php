@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+
+<!-- This is to be moved to the CSS file when we get a sense of what our real styles are going to look like. -->
 <style type="text/css">
 #banner img{
 	display:block;
