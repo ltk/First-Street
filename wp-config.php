@@ -14,18 +14,21 @@
  * @package WordPress
  */
 
+ /* Load in our environment variables */
+require_once('environment/load_environment.php');
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'firststreet_wp_dev');
+define('DB_NAME', $_ENV["DB_NAME"]);
 
 /** MySQL database username */
-define('DB_USER', 'root');
+define('DB_USER', $_ENV["DB_USER"]);
 
 /** MySQL database password */
-define('DB_PASSWORD', 'root');
+define('DB_PASSWORD', $_ENV["DB_PASSWORD"]);
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', $_ENV["DB_HOST"]);
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
@@ -78,7 +81,7 @@ define('WPLANG', '');
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', $_ENV["WP_DEBUG"]);
 
 /* That's all, stop editing! Happy blogging. */
 
